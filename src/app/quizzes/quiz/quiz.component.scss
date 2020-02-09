@@ -2,14 +2,23 @@
 
 h2 {
     // Add some CSS here! What if you try to change the background?
-    //background: rgb(139, 70, 70);
-    //text-decoration:  underline;
-
+    margin-bottom: 0.3em;
 }
 
 .italic{
   font-style: italic; 
 }
-.button-card{
-    margin-left: 30%;
+.date1{
+  font-size: small;
+  font-style: italic; 
+}
+//.button-card{
+
+//}
+
+.button-list{
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 0.3em;
+  margin-top: 0.3em;
 }

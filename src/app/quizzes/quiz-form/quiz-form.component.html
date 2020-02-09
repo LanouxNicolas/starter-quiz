@@ -8,7 +8,15 @@
     <br>
     <label for="theme">
       Theme <br>
-      <input class="input-custom" type="text" id="name" [formControlName]="'name'">
+      <select name="theme" id="theme" [formControlName]="'theme'">
+          <option value="">--Please choose a theme--</option>
+          <option value="Actor">Actor</option>
+          <option value="eSport">eSport</option>
+          <option value="KJBi">KJBi</option>
+          <option value="Anime">Anime</option>
+          <option value="House">House</option>
+          <option value="Geography">Geography</option>
+      </select>
     </label>
     <br>
     <button type="submit" class="button-card" (click)="addQuiz()">Create</button>

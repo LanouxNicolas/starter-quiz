@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Quiz } from '../models/quiz.model';
 import { QUIZ_LIST } from '../mocks/quiz-list.mock';
+import { HttpClientModule } from '@NgModule';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,13 @@ export class QuizService {
   addQuiz(quiz: Quiz) {
     // You need here to update the list of quiz and then update our observable (Subject) with the new list
     // More info: https://angular.io/tutorial/toh-pt6#the-searchterms-rxjs-subject
-    this.quizzes.push(quiz);
+    this.quizzes.push(quiz); // ajoute le quiz
+    this.quizzes$.next(this.quizzes); // notifie que y a un nouveau quiz
   }
+
+  deleteQuiz(quiz: Quiz) {
+    this.quizzes.splice(this.quizzes.indexOf(quiz), 1);
+    this.quizzes$.next(this.quizzes);
+  }
+
 }

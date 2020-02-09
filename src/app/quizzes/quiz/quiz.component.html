@@ -1,15 +1,22 @@
 <div class="card">
     <h2>
         <i class="fab fa-leanpub"></i>
-        Nom : {{quiz.name}}    </h2>
+        Nom : {{quiz.name}}    
+    </h2>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;
         <span *ngIf ="quiz.theme==='League Of Legends'"><i class="fab fa-twitch"></i></span>
         <span *ngIf ="quiz.theme!=='League Of Legends'"><i class="fas fa-hashtag"></i></span>
         <span class="italic">Theme : {{quiz.theme}}<br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         Nb Question : {{quiz.questions.length}}<br></span>
 
-    <button class="button-card" (click)="selectQuiz()">Select</button>
+        <div class="button-list">
+            <button class="button-card" (click)="deleteQuiz()">Delete</button>        
+            <button class="button-card" (click)="selectQuiz()">Select</button> 
+        </div>
+        &nbsp;&nbsp;
+        <span class="date1" *ngIf = "quiz.creationDate!==NULL">{{quiz.creationDate|date}}</span>
+        <span class="date1" *ngIf = "quiz.creationDate===NULL">Timeless</span>
 </div>

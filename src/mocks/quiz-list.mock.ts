@@ -15,6 +15,20 @@ export const QUESTION_ACTOR: Question = {
     ]
 };
 
+export const QUESTION_ESPORT: Question = {
+    label: 'Anivia se joue...',
+    answers: [
+        {
+            value: 'Jungle',
+            isCorrect: false,
+        },
+        {
+            value: 'Mid',
+            isCorrect: true,
+        }
+    ]
+};
+
 export const QUIZ_LIST: Quiz[] = [
     {
         name: 'Blabla', // What's happening if I change this value..?
@@ -24,6 +38,7 @@ export const QUIZ_LIST: Quiz[] = [
     {
         name: 'eSports',
         theme: 'League Of Legends',
-        questions: [],
+        questions: [QUESTION_ESPORT],
     }
 ];
+
