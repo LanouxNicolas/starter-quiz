@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Quiz } from '../models/quiz.model';
 import { QUIZ_LIST } from '../mocks/quiz-list.mock';
-import { HttpClientModule } from '@NgModule';
+// import { HttpClientModule } from '@NgModule';
 
 @Injectable({
   providedIn: 'root'
